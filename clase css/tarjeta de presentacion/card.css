@@ -1,0 +1,33 @@
+body{
+    background-color: aquamarine;
+}
+
+.card{
+    background-color: beige;
+    text-align: center;
+    width: 80%;
+    height: 1000px;
+    margin: auto;
+}
+
+h1{
+    background-color: gray;
+    margin: 40px 120px;
+    padding: 20px;
+    font-size: 50px;
+}
+
+h2{
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.texto{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    color: red;
+    padding-bottom: 20px;
+    background-color: aqua;
+    margin: 60px;
+}

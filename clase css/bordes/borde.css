@@ -1,0 +1,19 @@
+body{
+    background-color: black;
+}
+
+div{
+    margin: 20px;
+    text-align: center;
+}
+
+input{
+    background-color: black;
+    color: greenyellow;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-top: 2px solid grey;
+    border-radius: 10px ;
+    color: aliceblue;
+}
