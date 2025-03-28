@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+}
+.box{
+
+    width: 100%;
+    height: 100px;
+    /*background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD6Dw6GUAuE5vFSsoeSzC69sjt_OB1OSUYcd8e5gPpHFC6v0-YFgSQFQH-WDcFiq3t-k4&usqp=CAU");
+    background-color: red;
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;*/
+    /*resumido sin tantas lineas*/
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD6Dw6GUAuE5vFSsoeSzC69sjt_OB1OSUYcd8e5gPpHFC6v0-YFgSQFQH-WDcFiq3t-k4&usqp=CAU")
+    top / cover fixed red;
+}
+
+.texto{
+
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    font-size: smaller;
+    background-color: #0a0a0a;
+    color: aliceblue;
+    font-weight: 100;
+}
+
+.opaco{
+    height: 100%;
+    width: 100%;
+    background-color: #000a;
+}
