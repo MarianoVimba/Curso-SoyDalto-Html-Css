@@ -1,0 +1,27 @@
+body{
+    background-color: red;
+    margin: 0;
+}
+.box{
+    height: 300px;
+    width: 200px;
+    margin: auto;
+    background: linear-gradient(to top ,rgb(63, 50, 50),transparent);
+    margin-top: 50px;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+img{
+    margin-top: 25px;
+    width: 200px;
+    height: 200px;
+    
+}
+
+h1{
+    color: aliceblue;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px;
+}
