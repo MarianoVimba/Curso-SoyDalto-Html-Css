@@ -1,33 +1,56 @@
 body{
-    background-color: aquamarine;
+    background-color: rgb(255, 255, 255);
 }
 
 .card{
     background-color: beige;
     text-align: center;
-    width: 80%;
-    height: 1000px;
+    width: 60%;
     margin: auto;
+    margin-top: 40px;
+    border-radius: 20px;
+    box-sizing: border-box;
 }
 
-h1{
-    background-color: gray;
-    margin: 40px 120px;
-    padding: 20px;
-    font-size: 50px;
+.card_imagen{
+    margin-top: 15px;
+    border-radius: 50%;
+    border: 2px solid black;
+    box-shadow: 0 0 20px black;
+    width: 20%;
 }
 
-h2{
+.card_nombre{
+    color: rgb(37, 35, 35);
+    width: 100%;
+    text-align: center;
+    margin: 10px 0 ;
+    padding: 10px;
     font-size: 40px;
-    margin-bottom: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.texto{
+.card_habilidad{
+    font-size: 25px;
+    margin: 0 40px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.card_texto{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
-    font-size: 30px;
-    color: red;
-    padding-bottom: 20px;
-    background-color: aqua;
-    margin: 60px;
+    font-size: 20px;
+    color: rgb(61, 53, 53);
+    padding-bottom: 10px;
+    padding: 10px 40px;
+}
+
+.blue_card{
+    background-color: rgb(106, 106, 219);
+}
+
+.red_card{
+    background-color: rgb(219, 41, 41);
 }
