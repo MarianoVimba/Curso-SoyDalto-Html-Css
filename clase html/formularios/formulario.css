@@ -67,3 +67,11 @@ textarea{
     max-height: 200px;
     resize: vertical;
 }
+
+a{
+    text-decoration: none;
+}
+
+input[type="checkbox"] {
+    width: auto;            /* Usa su tamaño natural */
+}
