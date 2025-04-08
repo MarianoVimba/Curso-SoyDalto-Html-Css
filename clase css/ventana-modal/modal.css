@@ -1,0 +1,86 @@
+/* CON LA ETIQUETA DIALOG*/
+
+ body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #afacac;
+}
+
+dialog{
+    /*     position: absolute; ya viene con la configuracion q sea absolute */
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    color: aliceblue;
+    box-sizing: border-box;
+}
+
+.modal__content{
+    background-color: white;
+    color: black;
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+
+}
+    
+.modal__title{
+        width: 400px;
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 10px;
+        margin: auto;
+}
+
+.modal__close-bottom{
+    background-color: rgb(70, 65, 65);
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+}  
+
+
+/*OPCION SIN DIALOG*/
+/* body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #afacac;
+}
+
+.modal{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    color: aliceblue;
+}
+.modal__content{
+    width: 80%;
+    height: auto;
+    background-color: white;
+    color: black;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+    
+.modal__title{
+        width: 400px;
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 10px;
+        margin: auto;
+}
+        
+
+.modal__close-bottom{
+    background-color: rgb(70, 65, 65);
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+}  */
