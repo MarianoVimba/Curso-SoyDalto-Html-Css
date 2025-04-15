@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.contenedor{
+    border: 1px solid black;
+    height: 400px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-evenly /*espaciado parejo entre los items*/;
+    align-content: space-evenly;/*muchas lineas en el eje cruzado  */
+    align-items: center; /*para una sola linea en el eje cruzado*/
+    gap: 10px;
+}
+
+.flex-item{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    text-align: center;
+    color: aliceblue;
+    font-size: 50px;
+}
