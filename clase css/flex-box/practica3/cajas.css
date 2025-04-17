@@ -1,0 +1,29 @@
+body{
+    font-family: sans-serif;
+    margin: auto;
+}
+
+body, div , p {
+    box-sizing: border-box;
+}
+
+.flex-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.caja{
+    display: inline-block;
+    background-color: aqua;
+    color: grey;
+    min-width: 200px;
+    margin: auto;
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 20px;
+    margin: 10px;
+
+}

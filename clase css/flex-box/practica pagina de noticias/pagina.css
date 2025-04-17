@@ -1,0 +1,121 @@
+body{
+    font-family: sans-serif;
+    margin: 0;
+    /*para q el body qde abajo*/
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*alinea vertical*/
+    min-height: 100vh;
+    /*esto es*/
+    justify-content: center;/*alinea horizontal*/
+   background-color: #ccc;
+}
+
+*{
+    box-sizing: border-box;
+}
+.contenedor,header,footer{
+    width: 100%;
+}
+
+aside, main{
+   background-color: #ededed;
+   padding: 20px;
+}
+
+header{
+    background-color: #48e;
+}
+
+.nav__list{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.nav__link{
+    text-decoration: none;
+    margin: 5px;
+    display: inline-block;
+    padding: 6px;
+    color: antiquewhite;
+}
+
+/*contenido*/
+
+.contenedor{
+    display: flex;
+    flex-grow: 1; /*para q ocupe hasta el footer*/
+    max-width: 1000px;
+    justify-content: center;
+    gap: 10px;
+}
+
+h1,h2{
+    text-wrap: balance;
+}
+
+p{
+    text-wrap: pretty;
+}
+
+aside{
+    flex-grow: 1;
+}
+
+.nav-secundario{
+    min-width: 12rem;
+    text-align: center;
+}
+
+.nav-secundario__list{
+    list-style: none;
+    padding: 0; /*es 0 xq sino cuando centra no queda bn centrado*/
+}
+
+.nav-secundario__link{
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: beige ;
+}
+
+.nav-secundario__link:hover{
+    opacity: 0.5;
+  
+}
+
+.contenido-adicional{
+    min-width: 200px;
+}
+
+
+/*footer*/
+.footer{
+    margin-top: auto;
+    padding: 20px;
+    background-color: rgb(43, 39, 39);
+    color: antiquewhite;
+    text-align: center;
+}
+
+/*al achicarse desaparece la barra de info*/
+@media screen and (max-width: 800px){
+    .contenido-adicional{
+        display: none;
+    }
+}
+
+/*pasa a estar en columnas cuando se achica*/
+@media screen and (max-width: 500px){
+    .contenedor{
+        flex-direction: column;
+    }
+}
+
+
