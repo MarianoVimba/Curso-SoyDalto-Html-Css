@@ -1,0 +1,442 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: #ddffdc;
+    color: #101;
+}
+
+body, html{
+    overflow-x: hidden;
+}
+
+body,div, ul, nav, header, footer, a, li, label{
+    margin: 0;
+    padding: 0;
+}
+
+/*----------------HEADER-------------------*/
+
+.header{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    container-type: inline-size;
+    container-name: header;
+    position: relative;
+    z-index: 10;
+    font-size: 20px;
+}
+
+.header__open-nav-button{ /*label*/
+    color: #1f651e;
+    font-size: 3rem;
+    font-weight: 700;
+    position: absolute;/*se va a posicionar segun el body o html xq no use un padre con relative*/
+    right: 10px; /*el = se mueva a la derecha*/
+}
+
+.header__checkbox{
+    display: none; 
+}
+
+.header__nav{
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    z-index: -1;
+}
+
+.header__nav-list{
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+.header__checkbox:checked ~ .header__nav{
+/*si esta chekeado modifica y aparece el nav*/
+    display: flex;
+}
+
+.header__logo{
+    max-width: 100%;
+    width: 60px;
+    margin: 10px 30px;
+    border-radius: 30%;
+    border: 2px solid rgb(69, 66, 66);
+}
+
+.header__nav-item{
+    list-style: none;
+}
+
+.header__nav-item a {
+    text-decoration: none;
+    color: #1f651e;
+}
+
+.header__nav-item a:not(:hover,:active) {/*si no pasamos el mouse y no hacemos click queda decorado*/
+    text-decoration: underline;
+    opacity: 0.5;
+}
+
+/*------------HEADER QUERIES-----------*/
+@container header (min-width: 600px){
+    .header__nav{
+        display: block;
+        position: static;
+        height: auto;
+        z-index: 2;
+        width: auto;
+        justify-content: space-evenly;
+    }
+    
+    .header__nav-list {
+        flex-direction: row;
+        height: auto;
+        width: auto;
+        gap: 30px;
+        margin-right: 40px;
+        justify-content: center;
+    }
+
+    .header__open-nav-button {
+        display: none;
+    }
+}
+
+/*---------HEADER END -------------*/
+
+
+
+/*---------PROFILE SECTION-------------*/
+
+.profile{
+    container-type: inline-size;
+    container-name: profile;
+}
+
+
+.profile__wrapper{
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    background-color: #fff;
+    max-width: 1400px;
+}
+
+.profile__data-container{
+    max-width: 600px;
+    padding: 30px;
+}
+
+.profile__img-container{
+    max-height: 500px;
+    overflow: hidden;/*para q la img haga un efecto como q se "esconde"*/
+    display: flex;
+    justify-content: center;
+}
+
+.profile__img{
+    max-width: 100%;
+    width: 400px;
+}
+
+h1{
+    color: #1f651e;
+    font-size: 35px;
+}
+
+.profile__data-container h2{
+    color: #1f651e;
+    font-size: 35px;
+}
+
+.profile__skill{
+    list-style: none;
+    display: flex;
+    margin: 10px;
+    max-width: 600px;
+    margin-left: 0;
+    align-items: center;
+}
+
+.load-bar{
+    border: 2px solid #1f651e;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 20px;
+    width: 100%;
+    margin: 4px;
+    padding: 2px;
+}
+
+.profile__skill-name{
+    color:#1f651e ;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.load-bar__bar{
+    background-color: #1f651e;
+    border-radius: 6px;
+    padding: 4px 6px;
+    margin-left: 0;
+}
+
+.bar--90{
+    width: 90%;
+}
+
+.bar--80{
+    width: 80%;
+}
+
+.bar--70{
+    width: 70%;
+}
+
+.bar--60{
+    width: 60%;
+}
+
+/*-----------------PROFILE QUERIES --------------------*/
+
+@container profile (min-width:720px){
+    
+    .profile__wrapper{
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+        background-color: transparent;
+        height: 90vh;
+        margin: auto;
+    }
+    
+    .profile__data-container{
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        border-radius: 0 25px 25px 0 ;
+        width: 100%;
+        max-width: 800px; 
+        margin: 0 auto; 
+        padding: 2rem; 
+        box-sizing: border-box; /* para que el padding no rompa el ancho */
+        overflow: auto; /* auto scroll interno / hidden pierde la informacion con el zoom*/
+        flex-wrap: wrap; /* para que no se desborde en zoom o pantallas chicas */
+    }
+
+    h1{
+        margin-top: 0;
+        text-wrap: balance;
+    }
+
+    .profile__data{
+        max-width: 620px;
+    }
+
+    .profile__img-container{
+        max-height: initial;
+        border-radius: 25px 0 0 25px;
+        max-width: 100%;
+   
+    }
+
+    .profile__img{
+        height: 100%;
+        object-fit: cover;
+        width: 600px;
+    }
+}
+
+/*---------------PROFILE ENDS-------------*/
+
+
+/*---------------PORTFOLIO SECTION-------------*/
+.portfolio{
+    background-color: #1f651e;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    container-type: inline-size;
+    container-name: portfolio;
+    justify-content: space-evenly;
+}
+
+.portfolio__project-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 1300px;
+    margin: auto;
+    width: 100%;
+    gap: 12px;
+    padding: 12px;
+    min-height: 80vh;
+
+}
+
+.portfolio__project{
+    background-image:linear-gradient(#0006), url("project.png");
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    place-content: center; /*centra el contenido*/
+    border-radius: 12px;
+}
+
+.portfolio__project:hover{
+    opacity: 0.9;
+    outline: 2px solid #fff;
+}
+
+/*-------------PORTFOLIO QUERIS-------------*/
+
+@container portfolio (min-width: 56.25rem){
+    .portfolio__project-container{
+        grid-template-columns: repeat(auto-fill, minmax(420px,1fr));
+
+    }
+
+    .portfolio__project:first-child{
+        grid-column: span 2;
+    }
+
+    .portfolio__project:nth-child(6){
+        grid-column: span 2;
+    }
+}
+
+@container portfolio  (min-width: 81.25rem){
+    .portfolio__project-container{
+        grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+
+    }
+
+    .portfolio__project:first-child{
+        grid-column: span 2;
+        grid-row: span 2;
+
+    }
+
+    .portfolio__project:nth-child(6){
+        grid-column: span 4;
+    }
+}
+
+/*-------------CONTACT SECTION----------------------*/
+
+.form{
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    container-type: inline-size;
+    container-name: contacto;
+}
+
+.form__title{
+    font-size: 30px;
+    color: #1f651e;
+}
+
+.form__form{
+    max-width: 600px;
+    width: 100%;
+    display: grid;
+}
+
+.form__input-container :is(input,textarea){
+    width: 100%;
+    padding: 6px;
+    font-size: 16px;
+    margin: 4px;
+    border: none;
+    box-shadow: 2px 2px 4px #101;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.form__input-container textarea{
+    resize: none;
+    min-height: 90px;
+    font-family: inherit;
+}
+
+.form__input-container input[type="submit"]{
+    padding: 12px;
+    background-color: #1f651e;
+    color: #fff;
+}
+
+.form__input-container label{
+    color: #1f651e;
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+/*-------------------CONTACTO QUERIES------------------*/
+
+@container contacto (min-width: 56.25rem){
+    .form__form{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "name lastname"
+        "email email"
+        "menssage menssage"
+        "button button"
+        ;
+        gap: 12px;
+        padding: 20px;
+        background-color: #18233f33;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 20px #0006;
+    }
+
+    .form__input-container:first-child{
+        grid-area: name;
+    }
+
+    .form__input-container:nth-child(2){
+        grid-area: lastname;
+    }
+
+    .form__input-container:nth-child(3){
+        grid-area: email;
+    }
+
+    .form__input-container:nth-child(4){
+        grid-area: menssage;
+    }
+
+    .form__input-container:nth-child(5){
+        grid-area: button;
+    }
+}
+
+/*--------------FOOTER SECTION--------------*/
+footer{
+    margin-top: 40px;
+    padding: 40px;
+    text-align: center;
+    background-color: rgb(48, 43, 43);
+    color: #fff;
+    font-size: 22px;
+}
+
+
+
+
